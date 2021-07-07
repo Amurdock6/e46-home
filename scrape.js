@@ -6,7 +6,7 @@ const writeStream = fs.createWriteStream('post.csv');
 
 //Write Headers
 
-writeStream.write(`Title,Link,Price \n`)
+writeStream.write(`Picture,Title,Link,Price \n`)
 
 //BaT Scraper
 request('https://bringatrailer.com/bmw/e46/?q=e46', (error, response, html) => {
@@ -19,14 +19,16 @@ request('https://bringatrailer.com/bmw/e46/?q=e46', (error, response, html) => {
        const link = $(title).attr("href");
        const pricetag = cheerio.load($(".featured-listing-meta-value")[counter]);
        const price = pricetag.text().replace(/,/,"");
+       const picture = ($(".featured-listing-image-container")[counter]);
+       //const pic = $(picture).attr("img");
        //Write to CSV
-       writeStream.write(`${car}, ${link}, ${price} \n`);
+       writeStream.write(`${picture},${car}, ${link}, ${price} \n`);
        counter += 2;
 
      });
      
       console.log('Scraping Complete...') 
-        
+      
   }
 
 });

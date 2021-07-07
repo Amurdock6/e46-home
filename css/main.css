@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-y: scroll;
+}
+
+#top-nav  {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    width: 100%;
+    height: 20%;
+}
+
+#top-nav img {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+
+.search-form-wrapper{
+    background-color: #cccbcb;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: auto;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-form-wrapper #content{
+    padding-left: 13vw;
+}
+
+.search-form-wrapper h1{
+    font-size: 42px;
+    padding-top: 7vh;
+}
+
+.search-form-wrapper p{
+    font-size: 21px;
+    width: 28%;
+    padding-top: 0.3vh;
+}
+
+.search-form-wrapper form{
+    justify-content: center;
+}
+
+input{
+    height: 4vh;
+    width: 10vw;
+    margin-top: 2vh;
+    margin-right: 2vh;
+}
+
+input::placeholder{
+    text-align: center;
+}
+
+/* Button for text */
+button{
+    background-color: #4290F5;
+    color: #fff;
+    height: 4vh;
+    width: 10vw;
+    position: relative;
+    margin-left: 45vw;
+    bottom: 6.4vh;
+}
+
+/* Button for form if I want it
+button{
+    background-color: #4290F5;
+    color: #fff;
+    height: 4vh;
+    width: 10vw;
+    margin-top: 2vh;
+    margin-right: 2vh;
+} */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    width: 100%;
+    height: 12vh;
+}
+
+footer a {
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    #top-nav img {
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
+        height: 60px;
+    }
+
+    .search-form-wrapper{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    input, button{
+        width: 41vw;
+    }
+  }
